@@ -1,0 +1,4 @@
+docutils==0.12
+robotframework==2.8.7
+robotframework-httplibrary==0.4.2
+robotframework-selenium2library==1.6.0
