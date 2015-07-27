@@ -13,22 +13,14 @@ ${DELAY}             0
 ${VALID USER}        admin
 ${VALID PASSWORD}    admin
 ${LOGIN URL}         http://${SERVER}/#/login
-# ${WELCOME URL}       http://${SERVER}/welcome.html
-# ${ERROR URL}         http://${SERVER}/error.html
 
 *** Keywords ***
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
-    # Maximize Browser Window
     Set Selenium Speed    ${DELAY}
-    # Login Page Should Be Open
-
-# Login Page Should Be Open
-#     Title Should Be    Login Page
 
 Go To Login Page
     Go To    ${LOGIN URL}
-    # Login Page Should Be Open
     [Arguments]    ${username}
     Input Text    name=username    ${username}
 
@@ -45,12 +37,10 @@ Submit Login
 
 Check URL After Login
     Wait For Condition    return $('div:contains(Taisys SSD)').length > 0
-    # Wait For Condition    Page Should Contain    Please Input
-    # Wait For Condition    Page Should Contain    Welcome to SSD(SoftSIM Download) system backend.
-    # Wait For Condition    return window.document.title == 'GreenRoam'
-    # Wait Until Page Contains Element    <p>Welcome to SSD(SoftSIM Download) system backend.</p>
-    # Location Should Be     http://${SERVER}/#/main
 
-# Welcome Page Should Be Open
-#     Location Should Be    ${WELCOME URL}
-#     Title Should Be    Welcome Page
+DoLogin
+    Open Browser To Login Page
+    Input Username    admin
+    Input Password    admin
+    Submit Login
+    Check URL After Login
