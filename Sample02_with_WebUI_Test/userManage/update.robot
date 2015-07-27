@@ -9,7 +9,7 @@ Resource          ../resource.robot
 Valid Login
     DoLogin
     Update User
-    # [Teardown]    Close Browser
+    [Teardown]    Close Browser
 
 *** Keywords ***
 Update User
