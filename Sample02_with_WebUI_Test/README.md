@@ -12,3 +12,4 @@
 
     ref: http://rtomac.github.io/robotframework-selenium2library/doc/Selenium2Library.html#Introduction
     ref: http://stackoverflow.com/questions/18608211/how-to-execute-jquery-using-selenium2library-under-robot-framework
+    ref: https://github.com/rtomac/robotframework-selenium2library/tree/master/test  # 各種 Selector 使用範例
