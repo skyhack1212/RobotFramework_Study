@@ -21,6 +21,7 @@ Update User
     Click Element    dom=$('button:contains(Query)')[0]
     Wait For Condition    return $('table tr[ng-repeat="item in userList"]').length > 0
     Click Element    dom=$('a:contains(Modify)')[0]
+    Select From List    dom=$(':visible[ng-model="item.status"]')[0]     Suspend
     Clear Element Text    dom=$(':visible[ng-model="item.suspend_reason"]')[0]
     Wait For Condition    return $('a:visible:contains(Save)').length > 0
     Click Element    dom=$('a:visible:contains(Save)')[0]
