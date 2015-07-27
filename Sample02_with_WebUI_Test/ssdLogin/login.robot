@@ -14,3 +14,11 @@ Valid Login
     Submit Login
     Check URL After Login
     [Teardown]    Close Browser
+
+Invalid Login
+    Open Browser To Login Page
+    Input Username    admin1
+    Input Password    admin
+    Submit Login
+    Alert Should Be Present    User is not found.
+    [Teardown]    Close Browser
